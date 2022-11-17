@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id = "CalculatorT1" class = "Spring.Xml.CalculatorT1">
+		<constructor-arg name = "functionCount" value="5"></constructor-arg>
+		<property name="Function">
+			<list>
+				<ref bean = "CubeFunction"/>
+				<ref bean = "LogFunction"/>
+				<ref bean = "FactorialFunction"/>
+				<ref bean = "SinFunction"/>
+				<ref bean = "SquareFunction"/>
+			</list>
+		</property>
+		
+	
+	</bean>
+    <bean id="CubeFunction" class = "Spring.Xml.CubeFunction"></bean>
+    <bean id="LogFunction" class = "Spring.Xml.LogFunction"></bean>
+    <bean id="FactorialFunction" class = "Spring.Xml.FactorialFunction"></bean> 
+    <bean id="SinFunction" class = "Spring.Xml.SinFunction"></bean> 
+    <bean id="SquareFunction" class = "Spring.Xml.SquareFunction"></bean> 
+</beans>
